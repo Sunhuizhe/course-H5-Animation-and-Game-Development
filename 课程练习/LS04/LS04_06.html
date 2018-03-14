@@ -28,10 +28,10 @@
 				context.fill();
 
 				//碰撞后角度的改变，关键部分
-				if (ball.x > theCanvas.width || ball.x < 0) {
+				if (ball.x+15 > theCanvas.width || ball.x-15 < 0) {
 					angle = 180 - angle;
 					updateBall();
-				} else if (ball.y > theCanvas.height || ball.y < 0) {
+				} else if (ball.y+15 > theCanvas.height || ball.y-15 < 0) {
 					angle = 360 - angle;
 					updateBall();
 				}
