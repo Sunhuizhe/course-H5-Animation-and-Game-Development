@@ -54,6 +54,32 @@ var HelloWorldLayer = cc.Layer.extend({
         //this.scheduleUpdate();
         this.schedule(this.myCallBack,0.02,cc.REPEAT_FOREVER,0);
         return true;
+<<<<<<< HEAD
+=======
+    },
+    update:function(dt){
+        cc.log("Timer"+dt);
+        this.num++;
+        if(this.num > 1000){this.unscheduleUpdate()}
+    },
+    myCallBack:function(dt){
+        /*
+        this.redSprite.x += 1;
+        this.redSprite.y += 1;
+        if(this.redSprite.x > 300){
+            this.unschedule(this.myCallBack);
+        }
+        */
+        this.redSprite.y -= this.speed;
+        if(this.redSprite.y < 0){
+            // cc.log(-this.speed);
+            this.speed = -12.6;
+            // this.speed = -this.speed;
+        }else{
+            this.speed += 0.2;
+            //this.speed += 10*dt;
+        }
+>>>>>>> 7bca3a7f3622330115880d5c1e7516143d2f73da
     }
     // update:function(dt){
     //     cc.log("Timer"+dt);
